@@ -1,8 +1,8 @@
 
-def isPalindromeInString(self, x: int) -> bool:
+def isPalindromeInString(x: int) -> bool:
     return str(x)==str(x)[::-1
 
-def isPalindrome(self, x: int) -> bool:
+def isPalindrome(x: int) -> bool:
     reverse = 0
     num = x
     while x != 0:
