@@ -5,11 +5,9 @@ class Solution:
         return str(x)==str(x)[::-1
 
     def isPalindrome(self, x: int) -> bool:
-        if x < 0:
-            return False
-        rev = 0
-        orig = x
+        reverse = 0
+        num = x
         while x != 0:
-            rev = rev * 10 + x % 10
+            reverse = reverse * 10 + x % 10
             x //= 10
-        return rev == orig
+        return reverse == num
