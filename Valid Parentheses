@@ -1,0 +1,16 @@
+def isValid(s: str) -> bool:
+    brac = []
+    for c in s:
+        if c == '(' or c=='[' or c=='{':
+            brac.append(c)
+        elif c ==')':
+            if '(' not in brac or brac.pop()!='(':
+                return False
+        elif c =='}':
+            if '{' not in brac or brac.pop()!='{':
+                return False
+        elif c ==']':
+            if '[' not in brac or brac.pop()!='[':
+                return False
+    if len(brac)>0: return False
+    return True
