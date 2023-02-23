@@ -1,0 +1,8 @@
+def pivotIndex(nums):
+    tot = sum(nums)
+    Sum =0
+    for i in range(len(nums)):
+        Sum+=nums[i]
+        if Sum == tot: return i
+        tot-=nums[i]
+    return -1
