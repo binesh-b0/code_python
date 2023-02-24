@@ -1,0 +1,8 @@
+def maxProfit(prices: List[int]) -> int:
+    buy = prices[0]
+    profit =0
+    for i in prices[1:]:
+        if i- buy  > profit:
+            profit = i - buy
+        if i < buy: buy = i
+    return profit
